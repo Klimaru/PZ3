@@ -28,4 +28,4 @@ jobs:
 
       - name: Report coverage
         if: ${{ success() }}
-        run: npm run report:coverage
+        uses: github/codeql-action/analyze@v2
