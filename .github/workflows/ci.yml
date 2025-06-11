@@ -26,6 +26,11 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+          
       - name: Report coverage
         if: ${{ success() }}
         uses: github/codeql-action/analyze@v2
